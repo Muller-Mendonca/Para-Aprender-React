@@ -5,8 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Iniciando os Estudos em React</title>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script> 
+     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
-    <p>começando</p>
+    
+    <div id="app"></div>
+
+
+    <script type="text/babel">
+
+    const Miniapp = () =>{
+
+        const [contador, setContador] = React.useState(0);
+
+
+        function atualizarContador(){
+            setContador(contador + 1);
+        }
+        
+        return (
+            <div style={{margin: '0px auto'}}>
+                <button style={{padding: '10px'}} onClick={atualizarContador}>{contador}</button>
+                <h1>VALOR TOTAL:</h1>
+            </div>)
+    }
+
+
+    ReactDOM.render(<Miniapp/>,document.getElementById('app'))
+    </script>
+
 </body>
 </html>
