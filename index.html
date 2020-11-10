@@ -27,9 +27,10 @@
         }
         
         return (
-            <div style={{margin: '0px auto'}}>
-                <button style={{padding: '10px'}} onClick={atualizarContador}>{contador}</button>
+            <div>
+                <button style={{padding: '10px', background: 'blue', border: '0'}} onClick={atualizarContador}>{contador}</button>
                 <h1>VALOR TOTAL:</h1>
+                <p>{'R$ ' + contador * 100}</p>
             </div>)
     }
 
