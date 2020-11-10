@@ -21,14 +21,21 @@
 
         const [contador, setContador] = React.useState(0);
 
+        React.useEffect(()=>{
+            console.log('testando')
+        },[])
+
+    
+
 
         function atualizarContador(){
             setContador(contador + 1);
         }
         
         return (
-            <div>
-                <button style={{padding: '10px', background: 'blue', border: '0'}} onClick={atualizarContador}>{contador}</button>
+            <div style={{margin: '50px'}}>
+                <button style={{width: '100px',padding: '10px', background: 'blue', border: '0', borderRadius: '5px'}} 
+                onClick={atualizarContador}>{contador}</button>
                 <h1>VALOR TOTAL:</h1>
                 <p>{'R$ ' + contador * 100}</p>
             </div>)
