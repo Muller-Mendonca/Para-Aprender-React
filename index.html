@@ -20,6 +20,7 @@
     const Miniapp = () =>{
 
         const [contador, setContador] = React.useState(0);
+        const [arr, setArr] = React.useState([1,2,3,4,5,6,7,8,9]);
 
         React.useEffect(()=>{
             if(contador > 0) console.log('testando ' + contador)
@@ -30,6 +31,12 @@
         function atualizarContador(){
             setContador(contador + 1);
         }
+
+        function adicionaNumerosNoArray(){
+            setArr(arr.map((number, i) => {
+                console.log(arr[i])
+            }))
+        }
         
         return (
             <div style={{margin: '50px'}}>
@@ -37,6 +44,10 @@
                 onClick={atualizarContador}>{contador}</button>
                 <h1>VALOR TOTAL:</h1>
                 <p>{'R$ ' + contador * 100}</p>
+                <div>
+                <button style={{padding: '10px'}} onClick={adicionaNumerosNoArray}>KKKKKKKKKKKKKKKKKKKKKKKKKKK</button>
+                <p>{arr}</p>
+                </div>
             </div>)
     }
 
