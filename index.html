@@ -22,12 +22,11 @@
         const [contador, setContador] = React.useState(0);
 
         React.useEffect(()=>{
-            console.log('testando ' + contador)
+            if(contador > 0) console.log('testando ' + contador)
+            return 'Testando'
         },[contador])
 
     
-
-
         function atualizarContador(){
             setContador(contador + 1);
         }
