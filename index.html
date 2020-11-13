@@ -39,6 +39,10 @@
             }))
         }
 
+        React.useEffect(()=>{
+            adicionaData();
+        },[])
+
         function adicionaData(){
             const data = new Date()
             const ano = data.getFullYear();
@@ -47,7 +51,7 @@
             console.log(ano)
             console.log(mes)
         }
-        adicionaData();
+        
         
         return (
             <div style={{margin: '50px'}}>
