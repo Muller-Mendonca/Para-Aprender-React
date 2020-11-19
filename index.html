@@ -17,56 +17,25 @@
 
     <script type="text/babel">
 
+    const Title = ({cor,title}) =>{
+        return <h1 style={{color: cor}}>{title}</h1>
+    }
+
+    const Paragrafo = () =>{
+        return <p style={{width: '100px', height: '100px', background: 'blue'}}>This is a paragrafer</p>
+    }
+
+    const Quadrado = ({fontSize, background, name, ...props}) =>{
+        return <span style={{fontSize: fontSize, background: background, ...props}}>{name}</span>
+    }
+
     const Miniapp = () =>{
-
-        const [contador, setContador] = React.useState(0);
-        const [arr, setArr] = React.useState([1]);
-        
-
-        React.useEffect(()=>{
-            if(contador > 0) console.log('testando ' + contador)
-            return 'Testando'
-        },[contador])
-
-    
-        function atualizarContador(){
-            setContador(contador + 1);
-        }
-
-        function adicionaNumerosNoArray(){
-            setArr(arr.map((number) => {
-                return number + 1
-            }))
-        }
-
-        React.useEffect(()=>{
-            adicionaData();
-        },[])
-
-        function adicionaData(){
-            const data = new Date()
-            const ano = data.getFullYear();
-            const mes = data.getMonth() + 1;
-            console.log(data);
-            console.log(ano)
-            console.log(mes)
-        }
-        
         
         return (
-            <div style={{margin: '50px'}}>
-                <button style={{width: '100px',padding: '10px', background: 'blue', border: '0', borderRadius: '5px'}} 
-                onClick={atualizarContador}>{contador}</button>
-                <h1>VALOR TOTAL:</h1>
-                <p>{'R$ ' + contador * 100}</p>
-                <div>
-                <button style={{padding: '10px'}} onClick={adicionaNumerosNoArray}>BOTÃO</button>
-                <p>{arr}</p>
-                </div>
-                <div>
-                    <h1>Date now</h1>
-                    
-                </div>
+            <div>
+                <Title cor='blue' title="Meu title" />
+                <Paragrafo/>
+                <Quadrado fontSize='50px' background='red' name="okgfgdtgdhdghydth" color="yellow" margin="100px"/>
             </div>)
     }
 
