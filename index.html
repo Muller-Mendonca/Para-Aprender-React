@@ -17,26 +17,25 @@
 
     <script type="text/babel">
 
-    const Title = ({cor,title}) =>{
-        return <h1 style={{color: cor}}>{title}</h1>
+    const Input = () =>{
+
+        return (
+            <form>
+            <label>Name</label>
+            <input type="text" name="name"/>
+            </form>
+    
+        )
     }
 
-    const Paragrafo = () =>{
-        return <p style={{width: '100px', height: '100px', background: 'blue'}}>This is a paragrafer</p>
-    }
-
-    const Quadrado = ({fontSize, background, name, ...props}) =>{
-        return <span style={{fontSize: fontSize, background: background, ...props}}>{name}</span>
-    }
 
     const Miniapp = () =>{
         
         return (
-            <div>
-                <Title cor='blue' title="Meu title" />
-                <Paragrafo/>
-                <Quadrado fontSize='50px' background='red' name="okgfgdtgdhdghydth" color="yellow" margin="100px"/>
-            </div>)
+      
+               <Input/>
+        )
+
     }
 
 
