@@ -17,15 +17,13 @@
 
     <script type="text/babel">
 
-    const Input = () =>{
+    const Input = ({text,type, name}) =>{
 
         return (
             <div className="content">
               <form className="forms">
-                <label>NAME</label>
-                <input type="text" name="name"/>
-                <label>PASSWORD</label>
-                <input type="password" name="name"/>
+                <label>{text}</label>
+                <input type={type} name={name}/>
               </form>
             </div>
            
@@ -36,8 +34,10 @@
     const Miniapp = () =>{
         
         return (
-      
-            <Input/>
+            <div>
+            <Input text="NAME" type="text" name={name}/>
+            <Input text="PASSWORD" type="password" name="password"/>
+            </div>
         )
 
     }
