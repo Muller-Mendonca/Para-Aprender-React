@@ -30,13 +30,20 @@
         )
     }
 
+    const Button = () =>{
+        return (
+            <button>ENVIAR</button>
+        )
+    }
+
 
     const Miniapp = () =>{
         
         return (
-            <div>
-            <Input text="NAME" type="text" name={name}/>
+            <div className="container">
+            <Input text="NAME" type="text" name="name"/>
             <Input text="PASSWORD" type="password" name="password"/>
+            <Button/>
             </div>
         )
 
