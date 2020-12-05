@@ -36,6 +36,10 @@
         )
     }
 
+    function handleSubmit(){
+        console.log('enviado')
+    }
+
 
     const Miniapp = () =>{
         
@@ -43,7 +47,7 @@
             <div className="container">
             <Input text="NAME" type="text" name="name"/>
             <Input text="PASSWORD" type="password" name="password"/>
-            <Button/>
+            <Button onSubmit={handleSubmit}/>
             </div>
         )
 
