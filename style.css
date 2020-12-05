@@ -50,3 +50,8 @@ button{
     border: 0;
     cursor: pointer;
 }
+
+button:hover{
+    background: #777;
+    transition: 0.3s;
+}

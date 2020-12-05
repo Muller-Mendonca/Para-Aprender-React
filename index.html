@@ -32,11 +32,12 @@
 
     const Button = () =>{
         return (
-            <button>ENVIAR</button>
+            <button onClick={handleClick}>ENVIAR</button>
         )
     }
 
-    function handleSubmit(){
+    function handleClick(e){
+        e.preventDefault();
         console.log('enviado')
     }
 
@@ -47,8 +48,9 @@
             <div className="container">
             <Input text="NAME" type="text" name="name"/>
             <Input text="PASSWORD" type="password" name="password"/>
-            <Button onSubmit={handleSubmit}/>
+            <Button/>
             </div>
+           
         )
 
     }
