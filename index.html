@@ -32,13 +32,16 @@
 
     const Button = () =>{
         return (
-            <button onClick={handleClick}>ENVIAR</button>
+            <div>
+                <button onClick={handleClick}>ENVIAR</button>
+            </div>
         )
     }
 
+
     function handleClick(e){
         e.preventDefault();
-        console.log('enviado')
+        console.log('ok')
     }
 
 
